@@ -20,7 +20,7 @@ class CardDemo extends StatelessWidget {
 
           // Card with elevation
           Card(
-            elevation: 8,
+            elevation: 8, // Elevation value
             child: Padding(
               padding: EdgeInsets.all(16.0),
               child: Text('Card with high elevation.'),

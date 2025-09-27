@@ -37,10 +37,10 @@ class HomePage extends StatelessWidget {
               leading: Icon(Icons.text_fields),
               trailing: Icon(Icons.arrow_forward),
               onTap: () {
-                // Navigator.push(
-                //   context,
-                // MaterialPageRoute(builder: (context) => TextWidgetDemo()),
-                // )
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TextWidgetDemo()),
+                );
               },
             ),
           ),
@@ -127,34 +127,36 @@ class TextWidgetDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Text Widget Demo')),
-      body: Padding(padding: EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('Hello, Flutter!'),
-          SizedBox(height: 20),
-          Text(
-            'Styled Text',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.blue,
-            )
-          ),
-          SizedBox(height: 20),
-          Text(
-            'Gaya Font seperti ini',
-            style: TextStyle(
-              fontSize: 16,
-              fontStyle: FontStyle.italic,
-              color: Colors.grey[600],
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Hello, Flutter!'),
+            SizedBox(height: 20),
+            Text(
+              'Styled Text',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
             ),
-            textAlign: TextAlign.justify, // Align text to the left
-            maxLines: 4,
-            overflow: TextOverflow.ellipsis,
-          )
-        ],
-      )),
+            SizedBox(height: 20),
+            Text(
+              'Gaya Font seperti ini',
+              style: TextStyle(
+                fontSize: 16,
+                fontStyle: FontStyle.italic,
+                color: Colors.grey[600],
+              ),
+              textAlign: TextAlign.justify, // Align text to the left
+              maxLines: 4,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
