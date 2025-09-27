@@ -21,7 +21,7 @@ class IconImageDemo extends StatelessWidget {
               Icon(Icons.star, size: 40, color: Colors.orange),
               Icon(Icons.person, size: 40, color: Colors.green),
               Icon(Icons.settings, size: 40, color: Colors.grey[600]),
-            ]
+            ],
           ),
 
           SizedBox(height: 30),
@@ -47,15 +47,21 @@ class IconImageDemo extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: Center(
-              child: Text(
-                'Local Image\nPlaceholder',
-                textAlign: TextAlign.center, // Center the text horizontally
-                style: TextStyle(color: Colors.grey[600]),
+              child:
+               Image.asset(
+                'assets/images/ishowjava.jpg',
+                errorBuilder: (context, error, stackTrace) {
+                  return Text( // Text to display when the image fails to load
+                    'Local Image\nPlaceholder',
+                    textAlign: TextAlign.center, // Center the text horizontally
+                    style: TextStyle(color: Colors.grey[600]),
+                  );
+                },
               ),
             ),
           ),
         ],
-      )
+      ),
     );
   }
 }
